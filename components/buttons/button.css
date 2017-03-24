@@ -7,14 +7,48 @@ of an element */
     box-sizing: border-box;
 }
 
+/* just grab the styles needed from the flexy flexbox grid */
+.flexy-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 960px;
+    /*max-width: 1140px; */
+    box-sizing: border-box;
+}
+
+
+.flexy-row {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.flexy-col {
+  flex-direction: column;
+}
+
+.flexy-between {
+  justify-content: space-between;
+}
+
+.flexy-w50 {
+  width: 50%;
+}
+
+.flexy-12 {
+  flex-basis: 100%;
+}
+
 
 .button {
     display: inline-block;
-    position:relative;
+    position: relative;
     padding: 5px 10px 6px;
+    margin: 0 .5em;
     border-radius: 5px;
     background-color: rgba(166,166,166,0.8);
-    line-height: 1;
+    /*line-height: 1;*/
     font-size: 16px;
     font-weight: bold;
     color: rgba(255,255,255,0.9);
@@ -34,15 +68,30 @@ of an element */
 
 .button-sm {
     font-size: 12px;
+    max-width: 100px;
 }
 
 .button-md {
+    max-width: 151px;
     font-size: 16px;
     padding: 7px 13px 7px;
 
 }
 
 .button-lg {
+    max-width: 190px;
     font-size: 24px;
     padding: 8px 14px 9px;
+}
+
+
+@media (max-width: 550px) {
+  .button-group {
+    flex-direction: column;
+  }
+
+  .button {
+    margin: .2em 0;
+  }
+
 }
